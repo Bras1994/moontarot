@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header{
+    background: #335;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    height: 50px;
+    margin: 5px;
+}
+
+/*Section*/
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+    width: 100%;
+    height: 100vh;
+}
+
+#home{
+    flex-direction: column;
+    background: #735;
+}
+
+#home h2{
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 70vh;
+}
+
+.player{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player div{
+    margin-bottom: 15px;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player div span{
+    margin: 10px;
+}
+
+.jugar{
+    margin-top: 20px;
+    background: #5aa;
+    padding: 5px 10px;
+    border: 1px solid #adc;
+}
+
+.btn:hover{
+    background: #adc;
+    border: 1px solid rgb(91, 167, 141);
+}
+
+.player h3{
+    display: none;
+    font-size: 15px;
+    color: red;
+    background: aliceblue;
+    padding: 5px;
+}
+
+/**Loading*/
+
+#loading{
+    background: #86a;
+}
+
+.gif-carga{
+    border-radius: 50%;
+    max-width: 350px;
+}
+
+
+/*Cartas*/
+#cartas{
+    background: #5aa;
+    padding: 35px 10px;
+}
+
+.carousel{
+    max-width: 400px;
+}
+.cartas{
+    display: flex;
+    justify-content: flex-start;
+    height: 90vh;
+}
+
+#salir{
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.carousel-indicators{
+    margin-bottom: 0;
+    bottom: -20px
+}
+
+.carousel-item{
+    max-width: 500px
+    ;
+}
+.carousel-item.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#resultado{
+    background-color: #adc;
+}
+
+p{
+    font-size: 12px;
+    margin-top: 15px;
+    max-width: auto;
+}
+
+h4{
+    display: none;
+}
+
+.w-100 {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/*Resultado*/
+
+.rdo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 35px;
+    height: 70vh;
+}
+
+.toast{
+    display: flex !important;
+    width: 100%;
+    max-width: 750px;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.toast-body p{
+    color: #335;
+    text-align: center;
+}
+
+.mt-2{
+    display: flex;
+}
+.btn-group-sm>.btn, .btn-sm {
+    font-size: 16px;
+    margin: 0 20px;
+    line-height: 15px;
+}
+
+.btn-secondary{
+    background-color: #5aa;
+}
+
+.btn-secondary:hover{
+    color: #335;
+}
+
+/*Match*/
+
+#match{
+    height: 70vh;
+}
+
+.match{
+    display: flex;
+    background: #735;
+}
+
+.rdo-jugador1 , .rdo-jugador2{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.miniatura{
+    height: 100px;
+    margin: 20px;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+}
+
+.resultadoMatch{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #335;
+    padding: 15px;
+    background: #335;
+    position: absolute;
+    top: 10px;
+}
+
+/*.resultadoMatch button{
+    margin-top: 50px;
+}*/
+
+.nombre h3{
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.resultado p{
+    font-size: 25px;
+    text-align: center;
+    background: #735;
+}

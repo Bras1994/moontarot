@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <meta name="keywords" content="tarot, arcanos, futuro, compatibilidad, amor, amistad">
+    <meta name="author" content="Brenda Santos">
+    <meta name="copyright" content="Santos 2022">
+    <meta name="title" content="MoonTarot App">
+    <meta name="description" content="App random de tarot.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moontarot.web.app/">
+    <meta property="og:title" content="MoonTarot App">
+    <meta property="og:description" content="App random de tarot. No está chequeado pibi.">
+    <meta property="og:image" content="https://moontarot.web.app/images/logo-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moontarot.web.app/">
+    <meta property="twitter:title" content="MoonTarot App'">
+    <meta property="twitter:description" content="App random de tarot. No está chequeado pibi.">
+    <meta property="twitter:image" content="https://moontarot.web.app/images/logo-banner.png">
+
+    <title>MoonTarot-App</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo-banner.png" alt="">
+        <h1>MoonTarot</h1>
+    </header>
+    <div class="contenedor-gral">
+        <section id="home">
+            <h2>Ingresá los nombres de quienes quieren saber el mensaje de las cartas.</h2>
+            <div class="contenedor">
+                <div class="player" id="jugadores">
+                    <div>
+                        <span>Nombre</span>
+                        <input type="text" name="" id="jugador1" class="input">
+                    </div>
+                    <div>
+                        <span>Nombre</span>
+                        <input type="text" name="" id="jugador2" class="input">
+                    </div> 
+                    <h3 id="mensaje"></h3>
+                    <button id="jugar" class="btn jugar">Probar suerte</button>
+                </div>
+                <div class="partidasAnteriores" id="listadoDePArtidas" display:none>
+                    
+                    <ul class="list-group" id="partidasAnt">
+                        <li class="list-group-item"></li>
+                    </ul>
+                </ul>
+                </div>
+            </div>
+            
+        </section>
+        <section id="loading">
+            <div class="contenedor">
+                <img src="images/loading.webp" alt="" class="gif-carga">
+            </div>
+           
+        </section>
+        <section id="cartas" class="contenedor cartas">
+            <!--<a href="#" id="salir"><i class="fa-solid fa-circle-xmark"></i></a>-->
+            <button id="salir">
+                <img src="images/source_icons_delete-circled-outline.svg" alt="">
+            </button>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+
+                    <div class="carousel-inner" id="cartaElegida">
+                            <div class="carousel-item active">
+                                <h5 id="tit00"></h5>
+                                <img src="" class="d-block w-100" alt="..." id="pic00">
+                                <p id="txt00"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h5 id="tit01"></h5>
+                                <img src="" class="d-block w-100" alt="..." id="pic01">
+                                <p id="txt01"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h5 id="tit02"></h5>
+                                <img src="" class="d-block w-100" alt="..."id="pic02">
+                                <p id="txt02"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h5 id="tit03"></h5>
+                                <img src="" class="d-block w-100" alt="..."id="pic03">
+                                <p id="txt03"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h5 id="tit04"></h5>
+                                <img src="" class="d-block w-100" alt="..."id="pic04">
+                                <p id="txt04"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h5 id="tit05"></h5>
+                                <img src="" class="d-block w-100" alt="..."id="pic05">
+                                <p id="txt05"></p>
+                            </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                  
+            </div>
+        </section>
+        <section id="resultado" class="contenedor rdo">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                  <p><b>Ya sabés que cartas son para vos y tu persona elegida. <br> Ahora, ¿Querés verlas nuevamente o preferís volver a tirar?</b></p>
+                  <div class="mt-2 pt-2 border-top">
+                    <button type="button" class="btn btn-primary btn-sm" id="volver">Volver a tirar</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast" id="verMatch">Ver Matcheo</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="match" class="contenedor">
+            <span>Compatibilidad</span>
+            <div class="resultadoMatch">
+                <div class="rdo-jugador1">
+                    <div class="nombre" id="detalle_name1">
+                    </div>
+                    <div class="items">
+                        <div class="img-miniatura">
+                            <img src="" alt=""id="pic000" class="miniatura">
+                            <p id="tit00"></p>
+                        </div>
+                        <div class="img-miniatura">
+                            <img src="" alt="" id="pic001" class="miniatura">
+                            <p id="tit01"></p>
+                        </div>
+                        <div class="img-miniatura">
+                            <img src="" alt="" id="pic002" class="miniatura">
+                            <p id="tit02"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rdo-jugador2">
+                    <div class="nombre" id="detalle_name2">
+                    </div>
+                    <div class="items">
+                        <div class="img-miniatura" >
+                            <img src="" alt="" id="pic003" class="miniatura">
+                            <p id="tit3"></p>
+                        </div>
+                        <div class="img-miniatura" >
+                            <img src="" alt="" id="pic004" class="miniatura">
+                            <p id="tit04"></p>
+                        </div>
+                        <div class="img-miniatura" >
+                            <img src="" alt="" id="pic005" class="miniatura">
+                            <p id="tit05"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resultado" id="resultadoMatch">
+
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" id="volver2">Volver a tirar</button>
+            </div>
+
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="info.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
